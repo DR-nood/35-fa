@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://nvfijbaduxod"]
+
+[ext_resource type="Script" path="res://skkrapt/mnue.gd" id="1_yvxwm"]
+[ext_resource type="FontFile" uid="uid://1lx8o7aq1oui" path="res://asstes/fonts/PixelOperator8-Bold.ttf" id="2_c77x6"]
+[ext_resource type="Texture2D" uid="uid://c1leaxy2b773o" path="res://game assets/big_.png" id="3_02wlm"]
+[ext_resource type="Texture2D" uid="uid://cf12mt0hct8oa" path="res://game assets/big_pressed.png" id="4_1gjxh"]
+[ext_resource type="AudioStream" uid="uid://dei16ctdbvldl" path="res://game assets/switch21.ogg" id="5_qqc4t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prqri"]
+load_path = "res://.godot/imported/Background.png-74d041d391e879ba9476c3ddee2aa39d.ctex"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("1_yvxwm")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(511.5, 305)
+scale = Vector2(0.547396, 0.583333)
+texture = SubResource("CompressedTexture2D_prqri")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24, 0.24, 0.24, 0.537255)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 42.0
+offset_right = 941.0
+offset_bottom = 125.0
+theme_override_colors/font_shadow_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_colors/font_outline_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_constants/line_spacing = 5
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_c77x6")
+theme_override_font_sizes/font_size = 75
+text = "THE ONE GAME"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="play" type="TextureButton" parent="Node"]
+offset_left = 358.0
+offset_top = 220.0
+offset_right = 610.0
+offset_bottom = 336.0
+texture_normal = ExtResource("3_02wlm")
+texture_pressed = ExtResource("4_1gjxh")
+
+[node name="Label" type="Label" parent="Node/play"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 28.0
+offset_right = 227.0
+offset_bottom = 86.0
+theme_override_colors/font_shadow_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_colors/font_outline_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_constants/line_spacing = 4
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_c77x6")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node/play"]
+stream = ExtResource("5_qqc4t")
+bus = &"mnue"
+
+[node name="exit button" type="TextureButton" parent="Node"]
+offset_left = 358.0
+offset_top = 391.0
+offset_right = 610.0
+offset_bottom = 507.0
+texture_normal = ExtResource("3_02wlm")
+texture_pressed = ExtResource("4_1gjxh")
+
+[node name="EX" type="Label" parent="Node/exit button"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 243.0
+offset_bottom = 83.0
+theme_override_colors/font_shadow_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_colors/font_outline_color = Color(0.160784, 0.215686, 0.992157, 1)
+theme_override_constants/line_spacing = 4
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_c77x6")
+theme_override_font_sizes/font_size = 50
+text = "EXITE"
+
+[connection signal="pressed" from="Node/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Node/exit button" to="." method="_on_exit_button_pressed"]

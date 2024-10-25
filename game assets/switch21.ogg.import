@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dei16ctdbvldl"
+path="res://.godot/imported/switch21.ogg-a129baec14fa247d353e08e1ff466328.oggvorbisstr"
+
+[deps]
+
+source_file="res://game assets/switch21.ogg"
+dest_files=["res://.godot/imported/switch21.ogg-a129baec14fa247d353e08e1ff466328.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,163 @@
+[gd_scene load_steps=8 format=3 uid="uid://ci605jobws5o0"]
+
+[ext_resource type="Texture2D" uid="uid://b7biokoqnc1xk" path="res://art/art/buton 1 pressed .png" id="1_1se1k"]
+[ext_resource type="Script" path="res://skkrapt/lvs.gd" id="1_1wfif"]
+[ext_resource type="Texture2D" uid="uid://t7hunxjssdd5" path="res://art/art/buton 1.png" id="2_s27kc"]
+[ext_resource type="FontFile" uid="uid://ymf8xysiio5e" path="res://art/art/PlaymegamesReguler-2OOee.ttf" id="3_n53c3"]
+[ext_resource type="Texture2D" uid="uid://duxs7bxvusdho" path="res://art/art/home button pressed.png" id="4_hvuvn"]
+[ext_resource type="Texture2D" uid="uid://cr4atjcpfaahs" path="res://art/art/home button .png" id="5_vloys"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hq3tb"]
+load_path = "res://.godot/imported/Background.png-74d041d391e879ba9476c3ddee2aa39d.ctex"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1wfif")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(511.5, 305)
+scale = Vector2(0.547396, 0.583333)
+texture = SubResource("CompressedTexture2D_hq3tb")
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = -933.0
+offset_top = -537.0
+offset_right = 938.0
+offset_bottom = 516.0
+color = Color(0, 0.690196, 0.478431, 0.529412)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 84.0
+offset_right = 179.0
+offset_bottom = 234.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 34.0
+offset_right = 91.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "1"
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 87.0
+offset_right = 543.0
+offset_bottom = 237.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label2" type="Label" parent="TextureButton2"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 25.0
+offset_right = 97.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "2"
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 86.0
+offset_right = 885.0
+offset_bottom = 236.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label3" type="Label" parent="TextureButton3"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 30.0
+offset_right = 101.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "3"
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 266.0
+offset_right = 174.0
+offset_bottom = 416.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label4" type="Label" parent="TextureButton4"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 33.0
+offset_right = 97.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "4"
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 269.0
+offset_right = 543.0
+offset_bottom = 419.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label5" type="Label" parent="TextureButton5"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 32.0
+offset_right = 100.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "5"
+
+[node name="TextureButton6" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 270.0
+offset_right = 883.0
+offset_bottom = 420.0
+texture_normal = ExtResource("2_s27kc")
+texture_pressed = ExtResource("1_1se1k")
+
+[node name="Label6" type="Label" parent="TextureButton6"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 93.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("3_n53c3")
+theme_override_font_sizes/font_size = 100
+text = "6"
+
+[node name="home" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 445.0
+offset_right = 648.0
+offset_bottom = 595.0
+texture_normal = ExtResource("5_vloys")
+texture_pressed = ExtResource("4_hvuvn")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
